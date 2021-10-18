@@ -11,6 +11,7 @@ IndoorLocation 程序使用说明书
 3.分析传感器数据，利用PDR定位方法推算行人移动轨迹并显示在地图上。
 
 ![图片](https://user-images.githubusercontent.com/67481255/137683648-73163698-d7ee-4134-842d-828e3f517485.png)
+
 程序包说明：
 顶级目录 com.hust.indoorlocation
 	base 保存有一些自定义的基类信息，方便继承后统一修改
@@ -26,6 +27,7 @@ IndoorLocation 程序使用说明书
 		graphs 折线图界面
 
 ![图片](https://user-images.githubusercontent.com/67481255/137683690-b3e19a15-624d-4767-a7fb-ae876acb0d01.png)
+
 CollecterService后台服务：运行期间收集传感器和蓝牙信息，保存为.csv文件。
 PdrService后台服务：调用NaivePdrConsumer分析传感器信息，将计算结果通过PDRcallback接口传递给PdrActivity。
 
