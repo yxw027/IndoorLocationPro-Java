@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_ble_scan"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_play_arrow_24"
+        android:title="@string/menu_ble_open"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_ble_help"
+        android:enabled="true"
+        android:icon="@drawable/ic_help_white_24dp"
+        android:title="@string/menu_ble_help"
+        app:showAsAction="never" />
+
+
+</menu>

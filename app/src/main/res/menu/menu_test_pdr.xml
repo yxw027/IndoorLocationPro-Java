@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_pdr_start"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_pause_24"
+        android:title="@string/menu_pdr_start"
+        app:showAsAction="never" />
+
+<!--    <item-->
+<!--        android:id="@+id/action_pdr_end"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_baseline_pause_24"-->
+<!--        android:title="@string/menu_pdr_end"-->
+<!--        app:showAsAction="never" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/action_pdr_clean"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_baseline_delete_24"-->
+<!--        android:title="@string/menu_pdr_clean"-->
+<!--        app:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/action_pdr_help"
+        android:enabled="true"
+        android:icon="@drawable/ic_help_white_24dp"
+        android:title="@string/menu_ble_help"
+        app:showAsAction="never" />
+</menu>

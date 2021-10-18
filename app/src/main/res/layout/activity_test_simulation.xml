@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.collector.CollectorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:onClick="setLocEnable"
+            android:text="关闭定位图标"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:onClick="setNormalType"
+            android:text="普通模式"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:onClick="setFollowType"
+            android:text="跟随模式"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:onClick="setCompassType"
+            android:text="罗盘模式"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/zoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:onClick="setZoomEnable"
+            android:text="缩放"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/scroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:onClick="setScrollEnable"
+            android:text="平移"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/rotate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:onClick="setRotateEnable"
+            android:text="旋转"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/overlook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:onClick="setOverlookEnable"
+            android:text="俯视"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FF444444"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/compass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:checked="true"
+            android:onClick="setCompassEnable"
+            android:text="开启指南针"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/doublezoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:onClick="setCenterWithDoubleClickEnable"
+            android:text="双击按照地图中心点放大"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/allGesture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:checked="false"
+            android:onClick="setAllGestureEnable"
+            android:text="禁用所有手势"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_Info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:textSize="18sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+
+        android:layout_marginStart="@dimen/map_content_padding"
+        android:layout_marginTop="@dimen/map_content_padding"
+        android:layout_marginEnd="@dimen/map_content_padding"
+        android:layout_marginBottom="@dimen/map_content_padding"
+        >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_pdr"
+        style="@style/Widget.Design.BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/viewBackground"
+        app:elevation="@dimen/dp_16"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        app:menu="@menu/menu_test_pdr" />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_collect_start"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_youtube_searched_for_24"
+        android:title="@string/menu_ble_start"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_collect_end"
+        android:enabled="true"
+        android:icon="@drawable/ic_clear_grey_24dp"
+        android:title="@string/menu_ble_end"
+        app:showAsAction="never" />
+
+
+</menu>

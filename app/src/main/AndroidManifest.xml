@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hust.indoorlocation" >
+    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 让应用启动设备发现或操纵蓝牙设置 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- LE Beacons位置相关权限 -->
+    <!-- <uses-sdk -->
+    <!-- android:minSdkVersion="7" -->
+    <!-- android:targetSdkVersion="10" /> -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取网络状态，根据网络状态切换进行数据请求网络转换 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 写外置存储。如果开发者使用了离线地图，并且数据写在外置存储区域，则需要申请该权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取外置存储。如果开发者使用了so动态加载功能并且把so文件放在了外置存储区域，则需要申请该权限，否则不需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 访问网络，进行地图相关业务数据请求，包括地图数据，路线规划，POI检索等 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 调用相机，用于实现扫描二维码，预览个性化地图编辑器生成的个性化地图样式（开发者实际开发中地图SDK不需要该权限） -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" /> <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" /> <!-- 用于实现扫描二维码，预览个性化地图编辑器生成的个性化地图样式（开发者实际开发中地图SDK不需要该权限） -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.test.PdrDataActivity"
+            android:exported="true"
+            android:label="@string/title_activity_pdr_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="xTKXTbPKI9KPAa12h7dcYulP1XrhDZ0H" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hust.baiduimap.BMapApiDemoMain"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_title_createmaplist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hust.baiduimap.list.CreateMapList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_title_createmaplist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hust.baiduimap.list.MapControlList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_title_createmaplist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hust.baiduimap.list.SearchRouteList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_title_createmaplist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hust.baiduimap.list.UtilsList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_title_createmaplist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hust.baiduimap.list.GeometryList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_title_createmaplist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hust.baiduimap.list.LayersList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_title_createmaplist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hust.baiduimap.list.SearchList"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_title_createmaplist"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.hust.indoorlocation.ui.graphs.GraphsActivity" />
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.test.PdrNaiveActivity"
+            android:exported="true" />
+
+        <service
+            android:name="com.hust.indoorlocation.ui.main.collector.CollectorService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.hust.indoorlocation.ui.main.test.simulation.PDRcallbackService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.hust.indoorlocation.ui.settings.SettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.survey.BleSurveyActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.survey.SensorSurveyActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.test.TestActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.collector.CollectorActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.survey.SurveyActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.test.simulation.DynamicDemo"
+            android:exported="true" />
+        <activity
+            android:name="com.hust.indoorlocation.ui.main.test.simulation.StaticDemo"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.hust.indoorlocation"
+            android:grantUriPermissions="true"
+            android:exported="false"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

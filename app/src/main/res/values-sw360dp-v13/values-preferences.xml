@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <bool name="config_materialPreferenceIconSpaceReserved"
+        tools:ignore="MissingDefaultResource,PrivateResource">
+        false
+    </bool>
+    <!--    设置界面左侧不留白  -->
+</resources>

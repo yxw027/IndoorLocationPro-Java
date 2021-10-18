@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/seekBarMax" />
+
+
+    <SeekBar
+        android:id="@+id/seekBarMax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBarMin"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="35dp"
+        android:layout_toStartOf="@+id/tvMax"
+        android:layout_marginEnd="5dp"
+        android:max="200"
+        android:min="-200"
+        android:paddingBottom="12dp" />
+
+
+    <TextView
+        android:id="@+id/tvMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarMax"
+        android:layout_alignParentEnd="true"
+        android:text="@string/dash"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="end"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/seekBarMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="8dp"
+        android:layout_toStartOf="@+id/tvMax"
+        android:layout_marginEnd="5dp"
+        android:max="200"
+        android:min="-200"
+        android:paddingBottom="12dp" />
+    <TextView
+        android:id="@+id/tvMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarMin"
+        android:layout_alignParentEnd="true"
+        android:text="@string/dash"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="end"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvMax"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="260dp"
+        android:layout_marginEnd="10dp"
+        android:text="当前速度:"
+        android:visibility="visible"
+        android:gravity="end"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/tvRateDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvMax"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="230dp"
+        android:layout_marginEnd="10dp"
+        android:text="normal"
+        android:visibility="visible"
+        android:gravity="end"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_btn_fast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvMax"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="150dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+
+        app:layout_behavior="com.ve.mvvm.widgets.behavior.ScrollAwareFABBehavior"
+        app:srcCompat="@drawable/ic_baseline_fast_forward_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvMax"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+
+        app:layout_behavior="com.ve.mvvm.widgets.behavior.ScrollAwareFABBehavior"
+        app:srcCompat="@drawable/ic_baseline_pause_24" />
+
+</RelativeLayout>

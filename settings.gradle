@@ -1,0 +1,4 @@
+rootProject.name = "IndoorLocationPro"
+include ':app'
+ //      ':basic_utils'
+        ':basic_mvvm'

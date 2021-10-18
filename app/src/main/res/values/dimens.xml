@@ -1,0 +1,81 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="custom_profile_image">50dp</dimen>
+    <dimen name="custom_profile_padding">2dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="poi_title_size">14sp</dimen>
+    <dimen name="ui_size">12sp</dimen>
+    <dimen name="actionbar_size">35sp</dimen>
+
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="avatar_width">80dp</dimen>
+    <dimen name="avatar_height">80dp</dimen>
+
+    <!-- item -->
+    <dimen name="item_tv_title">16sp</dimen>
+    <dimen name="item_tv_content">14sp</dimen>
+    <dimen name="item_tv_date">12sp</dimen>
+    <dimen name="item_tv_tag">12sp</dimen>
+    <dimen name="item_tv_author">12sp</dimen>
+    <dimen name="item_content_padding">10dp</dimen>
+    <dimen name="item_img_width">120dp</dimen>
+    <dimen name="item_img_height">90dp</dimen>
+
+    <!-- dp -->
+    <dimen name="dp_05">0.5dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_110">110dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <dimen name="dp_240">240dp</dimen>
+
+    <!-- sp -->
+    <dimen name="sp_8">8sp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_50">50sp</dimen>
+
+    <!--BottomNavigationView 的选中没有选中的字体大小-->
+    <dimen name="design_bottom_navigation_active_text_size">@dimen/sp_13</dimen>
+    <dimen name="design_bottom_navigation_text_size">@dimen/sp_12</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="sp_13">13dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_180">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="sp_25">25sp</dimen>
+    <dimen name="sp_20">20sp</dimen>
+    <dimen name="map_content_padding">12dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+</resources>

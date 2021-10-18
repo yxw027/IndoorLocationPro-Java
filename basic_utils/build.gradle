@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+apply from: "../basic.gradle"
+
+android {
+}
+
+dependencies {
+    api rootProject.ext.dependencies.blurred
+    //debugImplementation rootProject.ext.dependencies.ponyo
+    api rootProject.ext.dependencies.ponyoLog
+    api rootProject.ext.dependencies.ponyoCrash
+}
