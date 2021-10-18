@@ -18,16 +18,27 @@ IndoorLocation 程序使用说明书
 
 程序包说明：
 顶级目录 com.hust.indoorlocation
+
 	base 保存有一些自定义的基类信息，方便继承后统一修改
+	
 	locationMethods 定位方法
+	
 		pdr  行人航位推算定位方法
+		
 			orientation 方向策略
+			
 			step 步数策略
+			
 			stride 步长策略
+			
 	tools 工具包，辅助代码实现
+	
 	ui  ui界面类
+	
 		main 程序主界面
+		
 		setting 设置界面
+		
 		graphs 折线图界面
 
 ![图片](https://user-images.githubusercontent.com/67481255/137683690-b3e19a15-624d-4767-a7fb-ae876acb0d01.png)
